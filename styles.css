@@ -1,0 +1,110 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #dab98b;
+}
+
+header{
+    background-color: rgba(63, 45, 35);
+    position: relative;
+}
+
+nav{
+    color: white;
+    position: absolute;
+    top: 25%;
+    font-size: 28px;
+    right: 2%;
+}
+
+nav li{
+    display: inline;
+    padding-inline: 40px;
+    top: 20px;
+}
+
+.divHeader {
+    position: relative;
+}
+
+.logo {
+ width: 10%;   
+}
+
+.topbanner {
+    width: 100%;
+    margin: 0%;
+}
+
+.aboutus img {
+ width: 13%;
+ padding-left: 200px;
+ float: left;
+ padding-right: 50px;
+}
+
+.aboutus h2 {
+    clear: left;
+    text-align: center;
+
+}
+
+
+.aboutus p {
+    text-align: center;
+    padding-right: 500px;
+}
+
+.ourestablishment {
+    text-align: center;
+    position: relative;
+}
+
+.ourproducts h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.products-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.ourproducts p {
+    max-width: 500px;
+    text-align: left;
+}
+
+.ourproducts img {
+    width: 300px;
+    border-radius: 10px;
+    padding-bottom: 50px;
+}
+
+.ourhouse {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 20px;
+    cursor: grab;
+}
+
+.carousel:active {
+    cursor: grabbing;
+}
+
+.carousel img {
+    width: 400px;
+    border-radius: 10px;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+}
+
