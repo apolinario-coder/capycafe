@@ -23,6 +23,15 @@ nav li{
     top: 20px;
 }
 
+nav li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+}
+
 .divHeader {
     position: relative;
 }
@@ -46,9 +55,7 @@ nav li{
 .aboutus h2 {
     clear: left;
     text-align: center;
-
 }
-
 
 .aboutus p {
     text-align: center;
@@ -108,3 +115,28 @@ nav li{
     flex-shrink: 0;
 }
 
+/* FOOTER */
+footer {
+    padding: 30px 10px 10px 0;
+    background-color: rgba(63, 45, 35);
+}
+
+footer p {
+    color: white;
+    text-align: right;
+    font-size: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.logo_footer {
+    width: 10%;
+    padding-left: 85%;
+}
