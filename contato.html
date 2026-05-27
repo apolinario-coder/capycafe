@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaféBara ☕ — Contato</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="divHeader">
+            <img class="logo" src="img/logo.png" alt="Logo CaféBara">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="telas/produtos.html">Cardápio</a></li>
+                    <li><a href="telas/nossos_animais.html">Nossos Animais</a></li>
+                    <li class="nav-active">Contato</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO INTERNO -->
+    <div class="page-hero">
+        <h1>Fale Conosco</h1>
+        <p>Adoraríamos ouvir você! 🐾</p>
+        <div class="page-hero-line"></div>
+    </div>
+
+    <!-- CONTEÚDO DE CONTATO -->
+    <main class="contato-main">
+
+        <!-- CARDS DE CONTATO -->
+        <section class="contato-cards">
+            <div class="contato-card">
+                <div class="contato-card-icon">📍</div>
+                <h3>Endereço</h3>
+                <p>Rua das Capivaras, 123<br>Vila Madalena — São Paulo, SP<br>CEP 05432-000</p>
+            </div>
+            <div class="contato-card">
+                <div class="contato-card-icon">🕐</div>
+                <h3>Horário de Funcionamento</h3>
+                <p>
+                    Terça a Sexta: 12h – 20h<br>
+                    Sábados: 10h – 21h<br>
+                    Domingos: 10h – 18h<br>
+                    <em style="opacity:0.7;font-size:0.85rem">Segundas: fechado</em>
+                </p>
+            </div>
+            <div class="contato-card">
+                <div class="contato-card-icon">📞</div>
+                <h3>Telefone & Redes</h3>
+                <p>
+                    <a href="https://wa.me/5511999999999" target="_blank" class="contato-link">
+                        <i class="fa fa-whatsapp"></i> (11) 99999-9999
+                    </a><br>
+                    <a href="https://instagram.com/cafebara" target="_blank" class="contato-link">
+                        <i class="fa fa-instagram"></i> @cafebara
+                    </a><br>
+                    <a href="mailto:oi@cafebara.com.br" class="contato-link">
+                        <i class="fa fa-envelope"></i> oi@cafebara.com.br
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <!-- FORMULÁRIO + MAPA -->
+        <section class="contato-grid">
+
+            <!-- FORMULÁRIO -->
+            <div class="contato-form-wrapper">
+                <h2>Envie uma mensagem</h2>
+                <p class="contato-form-sub">Reservas, dúvidas ou só pra dizer olá — estamos aqui! 🤎</p>
+
+                <form class="contato-form" onsubmit="enviarFormulario(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nome">Seu nome</label>
+                            <input type="text" id="nome" placeholder="Como podemos te chamar?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" placeholder="seu@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="assunto">Assunto</label>
+                        <select id="assunto">
+                            <option value="">Selecione um assunto...</option>
+                            <option value="reserva">🗓️ Reserva / Agendamento</option>
+                            <option value="animais">🐾 Dúvidas sobre os animais</option>
+                            <option value="cardapio">☕ Cardápio & Produtos</option>
+                            <option value="outro">💬 Outro assunto</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" rows="5" placeholder="Escreva aqui sua mensagem..." required></textarea>
+                    </div>
+                    <button type="submit" class="contato-btn">
+                        Enviar mensagem <i class="fa fa-paper-plane"></i>
+                    </button>
+                    <p id="form-success" class="form-success" style="display:none">
+                        ✅ Mensagem enviada! Entraremos em contato em breve 🐾
+                    </p>
+                </form>
+            </div>
+
+            <!-- MAPA -->
+            <div class="contato-mapa-wrapper">
+                <h2>Nos encontre</h2>
+                <p class="contato-form-sub">Fácil de chegar, difícil de querer ir embora!</p>
+                <div class="mapa-frame">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d768.8350516583087!2d-46.63485938532868!3d-23.5606682509024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1772663718562!5m2!1spt-BR!2sbr"
+                        width="100%" height="340"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="como-chegar">
+                    <h4>🚇 Como chegar</h4>
+                    <p><strong>Metrô:</strong> Estação Vila Madalena (linha 2-verde), saída B — 5 min a pé</p>
+                    <p><strong>Ônibus:</strong> Linhas 177J-10, 5026-10 — parada em frente</p>
+                    <p><strong>Carro:</strong> Estacionamento conveniado na Rua Fidalga, 45</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- PERGUNTAS FREQUENTES -->
+        <section class="faq-section">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Preciso fazer reserva?</h4>
+                    <p>Sim! A visita é por sessões com horário marcado para garantir o bem-estar das capivaras e sua experiência. Reserve pelo WhatsApp ou pelo formulário acima.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Crianças podem entrar?</h4>
+                    <p>Sim, crianças a partir de 5 anos acompanhadas de responsável. Temos monitores para garantir que a interação seja segura e divertida para todos!</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Posso levar comida de fora?</h4>
+                    <p>Preferimos que não, pois os alimentos podem prejudicar as capivaras. Nosso cardápio tem opções deliciosas para você 🤎</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Qual a duração de cada sessão?</h4>
+                    <p>Cada sessão tem aproximadamente 75 minutos, com tempo livre para tomar um café, interagir com as capivaras e visitar a loja de souvenirs.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <img src="img/logo.png" class="logo_footer" alt="Logo CaféBara"/>
+        <p>
+            Reservas e informações:<br>
+            <a href="https://wa.me/5511999999999" target="_blank"><i class="fa fa-whatsapp"></i> (11) 99999-9999</a>
+            &nbsp;|&nbsp;
+            <a href="https://instagram.com/cafebara" target="_blank"><i class="fa fa-instagram"></i> @cafebara</a>
+        </p>
+        <p class="footer-credit">© 2025 CaféBara · Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        function enviarFormulario(e) {
+            e.preventDefault();
+            document.getElementById('form-success').style.display = 'block';
+            e.target.reset();
+            setTimeout(() => {
+                document.getElementById('form-success').style.display = 'none';
+            }, 5000);
+        }
+    </script>
+
+</body>
+</html>

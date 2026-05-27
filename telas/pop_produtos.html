@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaféBara ☕ — Detalhes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="pop-body">
+
+    <!-- TOPO -->
+    <div class="pop-header">
+        <div class="pop-header-line"></div>
+        <span>☕ CaféBara</span>
+        <div class="pop-header-line"></div>
+    </div>
+
+    <!-- CONTEÚDO -->
+    <div class="pop">
+        <h1 id="nome-produto"></h1>
+        <div class="divider">✦ ✦ ✦</div>
+
+        <!-- Slider -->
+        <div class="slider-wrapper">
+            <button class="slider-btn" id="prevBtn">&#10094;</button>
+            <div class="slider-img-frame">
+                <img id="slider-img" src="" alt="Foto do produto"/>
+            </div>
+            <button class="slider-btn" id="nextBtn">&#10095;</button>
+        </div>
+
+        <!-- Descrição -->
+        <div class="descricao-box">
+            <span class="descricao-label">Sobre o produto</span>
+            <p id="desc-produto"></p>
+        </div>
+    </div>
+
+    <!-- RODAPÉ -->
+    <div class="pop-footer">
+        © 2025 CaféBara · O primeiro café de capivaras do Brasil 🐾
+    </div>
+
+    <script>
+        function getParametro(chave) {
+            return new URLSearchParams(window.location.search).get(chave);
+        }
+
+        document.getElementById("nome-produto").textContent = getParametro("nomeProduto");
+        document.getElementById("desc-produto").textContent = getParametro("descProduto");
+
+        const imagens = getParametro("imgProduto")
+                        ? getParametro("imgProduto").split(',')
+                        : [];
+        let index = 0;
+        const sliderImg = document.getElementById("slider-img");
+
+        function mostrarImagem() {
+            if (imagens.length > 0) {
+                sliderImg.style.opacity = 0;
+                setTimeout(() => {
+                    sliderImg.src = imagens[index];
+                    sliderImg.style.opacity = 1;
+                }, 150);
+            }
+        }
+
+        document.getElementById("prevBtn").onclick = function () {
+            index = (index - 1 + imagens.length) % imagens.length;
+            mostrarImagem();
+        };
+
+        document.getElementById("nextBtn").onclick = function () {
+            index = (index + 1) % imagens.length;
+            mostrarImagem();
+        };
+
+        mostrarImagem();
+    </script>
+
+</body>
+</html>
