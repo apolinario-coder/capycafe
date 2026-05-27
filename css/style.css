@@ -129,7 +129,7 @@ footer {
 }
 
 .logo_footer {
-    height: 55px;
+    height: 65px;
     width: auto;
 }
 
@@ -876,7 +876,6 @@ main {
     width: 100%;
     border-radius: 12px;
     object-fit: contain;
-    max-height: 200px;
 }
 
 .em-breve-box {
